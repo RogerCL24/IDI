@@ -6,6 +6,9 @@
 #include <QKeyEvent>
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
+#include <vector>
+
+using namespace std;
 
 class MyGLWidget : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core
 {
@@ -32,10 +35,18 @@ class MyGLWidget : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core
   private:
     
     void creaBuffersRectangle();
+
+    void creaBuffersCano();
+
+    void creaBuffersRoda();
     
     void carregaShaders();
     
     void modelTransformQuadrat(glm::vec3 posicio, glm::vec3 escala);
+
+    void modelTransformQuadratCano();
+
+    void modelTransformQuadratRoda(glm::vec3 posicio, glm::vec3 escala);
 
     void pintaTanc();
     void pintaCos();
@@ -45,15 +56,16 @@ class MyGLWidget : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core
     // program
     QOpenGLShaderProgram *program;
     // attribute locations
-    GLuint vertexLoc, colorLoc;
+    GLuint vertexLoc, colorLoc, rotLoc;
     // uniform locations
     GLuint TGLoc;
 
     // VAOs
-    GLuint VAORec1, VAORec2;
-
+    GLuint VAORec, VAOCano, VAOGreyWheel, VAOBlackWheel;
     // viewport
     GLint ample, alt;    
+
+    float rotacio = 0.0, tx = 0.0;
     
     // colors
     glm::vec3 verd = glm::vec3(0.0,0.6,0.0);

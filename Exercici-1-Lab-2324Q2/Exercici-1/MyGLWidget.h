@@ -31,21 +31,26 @@ class MyGLWidget : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core
 
   private:
     
-    void creaBuffersQuadrat();
+    void creaBuffersRectangle();
     
     void carregaShaders();
     
     void modelTransformQuadrat(glm::vec3 posicio, glm::vec3 escala);
+
+    void pintaTanc();
+    void pintaCos();
+    void pintaCano();
+    void pintaRodes();
     
     // program
     QOpenGLShaderProgram *program;
     // attribute locations
-    GLuint vertexLoc;
+    GLuint vertexLoc, colorLoc;
     // uniform locations
     GLuint TGLoc;
 
     // VAOs
-    GLuint VAOQuadrat;
+    GLuint VAORec1, VAORec2;
 
     // viewport
     GLint ample, alt;    

@@ -22,7 +22,7 @@ void MyGLWidget::initializeGL ()
   carregaShaders();
   creaBuffersRectangle();
   creaBuffersCano();
-  //creaBuffersRoda();
+  creaBuffersRoda();
 }
 
 
@@ -44,10 +44,15 @@ void MyGLWidget::modelTransformQuadratCano()
   glUniformMatrix4fv(TGLoc, 1, GL_FALSE, &TG[0][0]);
 }
 
-/*void MyGLWidget::modelTransformQuadratRoda(glm::vec3 posicio, glm::vec3 escala) 
+void MyGLWidget::modelTransformQuadratRoda(float shift, float angle) 
 {
-
-}*/
+  glm::mat4 TG(1.0f);
+  TG = glm::translate(TG,glm::vec3(tx - 0.375 + shift,-0.125,0.0));
+  TG = glm::rotate(TG, angle + rotacio2, glm::vec3(0.0,0.0,1.0));
+  TG = glm::translate(TG,glm::vec3(0.375,0.125,0.0));
+  
+  glUniformMatrix4fv(TGLoc, 1, GL_FALSE, &TG[0][0]);
+}
 
 void MyGLWidget::pintaCos() {
 
@@ -72,21 +77,29 @@ void MyGLWidget::pintaCano() {
   glBindVertexArray(0);
 }
 
-/*void MyGLWidget::pintaRodes() {
+void MyGLWidget::pintaRodes() {
 
-  for (int i = 0; i < 6; ++i) {
-    glBindVertexArray(VAOGreyWheel);
-    modelTransformQuadratRoda(glm::vec3(0.0), glm::vec3(1.0));      
-    glDrawArrays(GL_TRIANGLES, 0, 6);    		                    
-    // Desactivem el VAO
-    glBindVertexArray(0);
+  for (int k = 0; k < 4; ++k) {
+    for (int i = 0; i < 6; ++i) {
+      glBindVertexArray(VAOGW);
+      modelTransformQuadratRoda(shift_x[k], vecRot[i]);      
+      glDrawArrays(GL_TRIANGLES, 0, 6);    		                    
+      // Desactivem el VAO
+      glBindVertexArray(0);
+
+      glBindVertexArray(VAOBW);
+      modelTransformQuadratRoda(shift_x[k], vecRot[i]);      
+      glDrawArrays(GL_TRIANGLES, 0, 6);    		                    
+      // Desactivem el VAO
+      glBindVertexArray(0);
+    }
   }
-}*/
+}
 
 void MyGLWidget::pintaTanc() {
   pintaCos();
   pintaCano();
-  //pintaRodes();
+  pintaRodes();
 }
 
 void MyGLWidget::paintGL ()
@@ -127,9 +140,11 @@ void MyGLWidget::keyPressEvent(QKeyEvent* event)
     	break;
     case Qt::Key_A: 
       tx -= 0.01;
+      rotacio2 += M_PI/180;
     	break;
     case Qt::Key_D: 
       tx += 0.01;
+      rotacio2 -= M_PI/180;
     	break;		
     default: event->ignore(); break;
   }
@@ -216,19 +231,19 @@ void MyGLWidget::creaBuffersCano()
 
 }
 
-/*void MyGLWidget::creaBuffersRoda()
+void MyGLWidget::creaBuffersRoda()
 {
   glm::vec3 VertRoda[6];
   glm::vec3 VertCol[6];
-  VertRoda[0] = glm::vec3(-0.4, 0.075, 0);
-  VertRoda[1] = glm::vec3( -0.35, -0.025, 0); 
-  VertRoda[2] = glm::vec3( -0.35, 0.075, 0);
-  VertRoda[3] = glm::vec3( -0.35, -0.025, 0);
-  VertRoda[4] = glm::vec3( -0.4, 0.075, 0);
-  VertRoda[5] = glm::vec3( -0.4, -0.025, 0);
+  VertRoda[0] = glm::vec3(-0.4, 0.025, 0);
+  VertRoda[1] = glm::vec3( -0.35, -0.075, 0); 
+  VertRoda[2] = glm::vec3( -0.35, 0.025, 0);
+  VertRoda[3] = glm::vec3( -0.35, -0.075, 0);
+  VertRoda[4] = glm::vec3( -0.4, 0.025, 0);
+  VertRoda[5] = glm::vec3( -0.4, -0.075, 0);
 
-  glGenVertexArrays(1, VAOGreyWheel);
-  glBindVertexArray(&VAOGreyWheel);
+  glGenVertexArrays(1, &VAOGW);
+  glBindVertexArray(VAOGW);
 
   GLuint VBO1;
   glGenBuffers(1, &VBO1);
@@ -247,7 +262,37 @@ void MyGLWidget::creaBuffersCano()
   glEnableVertexAttribArray(colorLoc);
 
   glBindVertexArray(0);
-}*/
+
+  glm::vec3 VertRoda2[6];
+  glm::vec3 VertCol2[6];
+  VertRoda2[0] = glm::vec3(-0.325, -0.1, 0);
+  VertRoda2[1] = glm::vec3( -0.225, -0.15, 0); 
+  VertRoda2[2] = glm::vec3( -0.225, -0.1, 0);
+  VertRoda2[3] = glm::vec3( -0.225, -0.15, 0);
+  VertRoda2[4] = glm::vec3( -0.325, -0.1, 0);
+  VertRoda2[5] = glm::vec3( -0.325, -0.15, 0);
+
+  glGenVertexArrays(1, &VAOBW);
+  glBindVertexArray(VAOBW);
+
+  GLuint VBO3;
+  glGenBuffers(1, &VBO3);
+  glBindBuffer(GL_ARRAY_BUFFER, VBO3);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(VertRoda2), VertRoda2, GL_STATIC_DRAW);
+  glVertexAttribPointer(vertexLoc, 3, GL_FLOAT, GL_FALSE, 0, 0);
+  glEnableVertexAttribArray(vertexLoc);
+
+  for (int j = 0; j < 6; ++j) VertCol2[j] = negre; 
+
+  GLuint VBO4;
+  glGenBuffers(1, &VBO4);
+  glBindBuffer(GL_ARRAY_BUFFER, VBO4);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(VertCol2), VertCol2, GL_STATIC_DRAW);
+  glVertexAttribPointer(colorLoc, 3, GL_FLOAT, GL_FALSE, 0, 0);
+  glEnableVertexAttribArray(colorLoc);
+
+  glBindVertexArray(0);
+}
 
 
 

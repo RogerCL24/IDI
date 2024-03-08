@@ -133,7 +133,7 @@ void MyGLWidget::keyPressEvent(QKeyEvent* event)
   makeCurrent();
   switch (event->key()) {
     case Qt::Key_Left:
-      if (rotacio < M_PI/2 - 0.01) rotacio += M_PI/18; 
+      if (rotacio < M_PI) rotacio += M_PI/18; 
     	break;
     case Qt::Key_Right: 
       if (rotacio > 0) rotacio -= M_PI/18;   

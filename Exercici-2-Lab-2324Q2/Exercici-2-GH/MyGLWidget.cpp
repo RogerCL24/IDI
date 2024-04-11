@@ -58,20 +58,6 @@ void MyGLWidget::initializeGL () {
   connect(&timer,SIGNAL(timeout()),this, SLOT(animar()));
 }
 
-void MyGLWidget::resizeOrtho() {
-  if (ra > 1.0) {
-    left = -radiEscena*ra;
-    right = radiEscena*ra;
-  }
-  else if (ra < 1.0){
-    bottom = -radiEscena/ra;
-    top = radiEscena/ra;
-  }
-  else {
-    left = bottom = -radiEscena;
-    right = top = radiEscena;
-  }
-} 
 
 void MyGLWidget::resizeGL (int w, int h) 
 {
@@ -88,7 +74,14 @@ void MyGLWidget::resizeGL (int w, int h)
   ra = float(ample)/float(alt);
   factorAngleY = M_PI / ample;
   factorAngleX = M_PI / alt;
-  resizeOrtho();
+  if (ra > 1.0) {
+    left = -radiEscena*ra;
+    right = radiEscena*ra;
+  }
+  else {
+    bottom = -radiEscena/ra;
+    top = radiEscena/ra;
+  }
   projectTransform();
 }
 
@@ -97,19 +90,19 @@ bool MyGLWidget::checkPosition(glm::vec3 pos)
 {
 	bool valid = true;
 
-  for (int i = 0; i < 30; ++i) {
-    if (pos == glm::vec3(-15,0,15 - i) || pos == glm::vec3(15,0,15 - i) || pos == glm::vec3(-15 + i,0,-15) || pos == glm::vec3(-15 + i,0,15)) {
-      valid = false;
-      break;
-    }
+  valid = !(pos == tailPos);
+
+  int i = 0;
+  while (i < bodyPos.size() and valid) {
+    if (pos == bodyPos[i]) valid = false;
+    ++i;
   }
-  for (int i = 0; i < bodyPos.size(); ++i) {
-    if (pos == bodyPos[i]) {
-      valid = false;
-      break;
-    }
-  } 
-  if (pos == tailPos) valid = false;
+
+  i = 0;
+  while (i < 30 and valid) {
+    valid = !(pos == glm::vec3(15,0,15 - i) || pos == glm::vec3(-15,0,15 - i) || pos == glm::vec3(-15 + i,0,15) || pos == glm::vec3(-15 + i,0,-15));
+    ++i;
+  }
 
 	return valid; 
 }
@@ -150,16 +143,24 @@ void MyGLWidget::paintGL ()
   for (int i = 0; i <= 30; ++i) {
     PipeTransform(glm::vec3(-15,0,15 - i));
     glDrawArrays(GL_TRIANGLES, 0, models[PIPE].faces().size()*3);
+  }
 
+  for (int i = 0; i <= 30; ++i) {
     PipeTransform(glm::vec3(15,0,15 - i));
     glDrawArrays(GL_TRIANGLES, 0, models[PIPE].faces().size()*3);
+  }
 
+  for (int i = 0; i <= 30; ++i) {
     PipeTransform(glm::vec3(-15 + i,0,15));
     glDrawArrays(GL_TRIANGLES, 0, models[PIPE].faces().size()*3);
+  }
 
+  for (int i = 0; i <= 30; ++i) {
     PipeTransform(glm::vec3(-15 + i,0,-15));
     glDrawArrays(GL_TRIANGLES, 0, models[PIPE].faces().size()*3);
   }
+
+
   
   // Terra
   glBindVertexArray (VAO_Terra);
@@ -230,7 +231,7 @@ void MyGLWidget::viewTransform ()
 void MyGLWidget::projectTransform ()
 {
   glm::mat4 Proj(1.0f);
-  if (perspectiva) Proj = glm::perspective (fov, ra, znear, zfar);
+  if (cam_perpectiva) Proj = glm::perspective (fov, ra, znear, zfar);
   else Proj = glm::ortho(left, right, bottom, top, znear, zfar);
   glUniformMatrix4fv (projLoc, 1, GL_FALSE, &Proj[0][0]);
 }
@@ -240,12 +241,23 @@ void MyGLWidget::iniCamera(){
   //obs = glm::vec3(0, 8, -30);
   //vrp = glm::vec3(0, -2, 0);
   //up = glm::vec3(0, 1, 0);
-  dist = radiEscena * 2.0;
+  dist = radiEscena * 3.0;
   fov = 2.0*asin(radiEscena/dist);
   znear =  dist - radiEscena;
   zfar  = dist + radiEscena;
   
-  resizeOrtho();
+  if (ra < 1.0) {
+    bottom = -radiEscena/ra;
+    top = radiEscena/ra;
+  }
+  else if (ra > 1.0){
+    left = -radiEscena*ra;
+    right = radiEscena*ra;
+  }
+  else {
+    left = bottom = -radiEscena;
+    right = top = radiEscena;
+  }
 
   Theta = float(M_PI/4.0);
   Psi = factorAngleX = factorAngleY = 0.0;
@@ -277,7 +289,7 @@ void MyGLWidget::iniEscena()
 
 void MyGLWidget::mouseMoveEvent(QMouseEvent *e)
 {
-  if (perspectiva) {
+  if (cam_perpectiva) {
     makeCurrent();
 
     if (e->y() > yClick) factorAngleY += 0.02;
@@ -320,8 +332,8 @@ void MyGLWidget::keyPressEvent(QKeyEvent* event)
       break;
         }
     case Qt::Key_C: { 
-      if (perspectiva) {
-        perspectiva = false;
+      if (cam_perpectiva) {
+        cam_perpectiva = false;
         Theta = float(M_PI/2.);
         x_anterior = factorAngleX;
         y_anterior = factorAngleY; 
@@ -329,7 +341,7 @@ void MyGLWidget::keyPressEvent(QKeyEvent* event)
 
       }
       else {
-        perspectiva = true;
+        cam_perpectiva = true;
         Theta -= float(M_PI/4.);   
         factorAngleX = x_anterior;
         factorAngleY = y_anterior;
@@ -339,7 +351,7 @@ void MyGLWidget::keyPressEvent(QKeyEvent* event)
       break;
         }           
     case Qt::Key_R: {
-      perspectiva = true;
+      cam_perpectiva = true;
       iniEscena();
       iniCamera();
       projectTransform();

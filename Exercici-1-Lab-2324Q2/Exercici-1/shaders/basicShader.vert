@@ -1,7 +1,7 @@
 #version 330 core
 
 in vec3 vertex;
-in vec3 colors;
+uniform vec3 colors;
 out vec4 outColors;
 
 uniform mat4 TG;

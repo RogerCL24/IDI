@@ -352,6 +352,8 @@ void MyGLWidget::keyPressEvent(QKeyEvent* event)
         }           
     case Qt::Key_R: {
       cam_perpectiva = true;
+      if (clock) timer.stop();
+      clock = false;
       iniEscena();
       iniCamera();
       projectTransform();

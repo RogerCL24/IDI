@@ -9,6 +9,8 @@
 
 ## Slots/signals
 
+He puesto el MyQLabel mas abajo para que se vean los signals/slots en la captura.
+
 <p align = "center">
 <img = src="https://github.com/RogerCL24/IDI/assets/90930371/434dbb8f-54f2-4614-8270-6251de6eea17"/>
 

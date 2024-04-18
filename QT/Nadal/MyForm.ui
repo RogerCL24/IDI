@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyForm</class>
+ <widget class="QWidget" name="MyForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>252</width>
+    <height>322</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="MyPushButton" name="pushButton_6">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="MyPushButton" name="pushButton_4">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="MyPushButton" name="pushButton_5">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="MyPushButton" name="pushButton">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="MyPushButton" name="pushButton_2">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="MyPushButton" name="pushButton_3">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QPushButton" name="pushButton_8">
+           <property name="text">
+            <string>SetRand</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDial" name="dial"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_7">
+           <property name="text">
+            <string>Sortir</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyPushButton</class>
+   <extends>QPushButton</extends>
+   <header>MyPushButton.h</header>
+   <slots>
+    <signal>spreadRandom(int)</signal>
+    <slot>calcRand()</slot>
+    <slot>color(int)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>MyForm</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>507</x>
+     <y>396</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>504</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton</receiver>
+   <slot>calcRand()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>65</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>65</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>spreadRandom(int)</signal>
+   <receiver>pushButton_2</receiver>
+   <slot>color(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>157</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>329</x>
+     <y>260</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>spreadRandom(int)</signal>
+   <receiver>pushButton_4</receiver>
+   <slot>color(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>28</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>70</x>
+     <y>154</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>spreadRandom(int)</signal>
+   <receiver>pushButton_5</receiver>
+   <slot>color(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>138</x>
+     <y>278</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>383</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>spreadRandom(int)</signal>
+   <receiver>pushButton_3</receiver>
+   <slot>color(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>147</x>
+     <y>300</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>556</x>
+     <y>289</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>spreadRandom(int)</signal>
+   <receiver>pushButton_6</receiver>
+   <slot>color(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>304</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>178</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>pushButton</receiver>
+   <slot>color(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>370</x>
+     <y>368</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>240</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>pushButton_2</receiver>
+   <slot>color(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>347</x>
+     <y>247</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>pushButton_3</receiver>
+   <slot>color(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>311</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>pushButton_4</receiver>
+   <slot>color(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>275</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>155</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>pushButton_5</receiver>
+   <slot>color(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>291</x>
+     <y>390</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>358</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>pushButton_6</receiver>
+   <slot>color(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>256</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyForm</class>
+ <widget class="QWidget" name="MyForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>565</width>
+    <height>294</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="MyLineEdit" name="lineEdit"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="MyPushButton" name="pushButton">
+           <property name="text">
+            <string>a</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="MyPushButton" name="pushButton_4">
+           <property name="text">
+            <string>e</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="MyPushButton" name="pushButton_5">
+           <property name="text">
+            <string>i</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="MyPushButton" name="pushButton_6">
+           <property name="text">
+            <string>o</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="MyPushButton" name="pushButton_7">
+           <property name="text">
+            <string>u</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string>Shift</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>328</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Sortir</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyPushButton</class>
+   <extends>QPushButton</extends>
+   <header>MyPushButton.h</header>
+   <slots>
+    <signal>writeLetter(QString)</signal>
+    <slot>capitalLetter()</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>MyLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>MyLineEdit.h</header>
+   <slots>
+    <slot>concatenate(QString)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton</receiver>
+   <slot>capitalLetter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>640</x>
+     <y>329</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>220</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_4</receiver>
+   <slot>capitalLetter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>620</x>
+     <y>312</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_5</receiver>
+   <slot>capitalLetter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>600</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_6</receiver>
+   <slot>capitalLetter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>545</x>
+     <y>325</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>196</x>
+     <y>325</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_7</receiver>
+   <slot>capitalLetter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>658</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>404</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>writeLetter(QString)</signal>
+   <receiver>lineEdit</receiver>
+   <slot>concatenate(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>172</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>writeLetter(QString)</signal>
+   <receiver>lineEdit</receiver>
+   <slot>concatenate(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>202</x>
+     <y>230</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>411</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>writeLetter(QString)</signal>
+   <receiver>lineEdit</receiver>
+   <slot>concatenate(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>198</x>
+     <y>262</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>writeLetter(QString)</signal>
+   <receiver>lineEdit</receiver>
+   <slot>concatenate(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>111</x>
+     <y>344</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>363</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>writeLetter(QString)</signal>
+   <receiver>lineEdit</receiver>
+   <slot>concatenate(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MyForm</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>655</x>
+     <y>504</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>463</x>
+     <y>510</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

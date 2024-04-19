@@ -1,5 +1,4 @@
 #include "MyPushButton.h"
-#include <QDebug>
 
 MyPushButton::MyPushButton(QWidget * parent) : QPushButton(parent) {
     connect(this,SIGNAL(clicked()),this,SLOT(castLetter()));

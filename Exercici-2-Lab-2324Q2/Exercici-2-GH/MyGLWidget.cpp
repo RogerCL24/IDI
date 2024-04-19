@@ -260,7 +260,7 @@ void MyGLWidget::iniCamera(){
   }
 
   Theta = float(M_PI/4.0);
-  Psi = factorAngleX = factorAngleY = 0.0;
+  Psi = 0.0;
 
   viewTransform();
 }
@@ -371,8 +371,3 @@ void MyGLWidget::animar() {
   updateSnakeGame();
   update();
 }
-
-
-
-
-

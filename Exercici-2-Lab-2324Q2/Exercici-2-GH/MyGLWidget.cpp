@@ -222,8 +222,8 @@ void MyGLWidget::viewTransform ()
   // Matriu de posició i orientació de l'observador
     glm::mat4 View(1.0);
     View = glm::translate(View, glm::vec3(0,0,-dist));
-    View = glm::rotate(View, Theta + factorAngleY, glm::vec3(1,0,0));
-    View = glm::rotate(View, -Psi + factorAngleX, glm::vec3(0,1,0));
+    View = glm::rotate(View, Theta, glm::vec3(1,0,0));
+    View = glm::rotate(View, -Psi, glm::vec3(0,1,0));
     View = glm::translate(View, -centreEscena);
     glUniformMatrix4fv (viewLoc, 1, GL_FALSE, &View[0][0]);
 }
@@ -291,12 +291,9 @@ void MyGLWidget::mouseMoveEvent(QMouseEvent *e)
 {
   if (cam_perpectiva) {
     makeCurrent();
+    Psi -= (e->x() - xClick) * factorAngleY; 
+    Theta += (e->y() - yClick) * factorAngleX;
 
-    if (e->y() > yClick) factorAngleY += 0.02;
-    else if (e->y() < yClick) factorAngleY -= 0.02;
-
-    if (e->x() > xClick) factorAngleX += 0.02;
-    else if (e->x() < xClick) factorAngleX -= 0.02;
 
     xClick = e->x();
     yClick = e->y();
@@ -335,16 +332,11 @@ void MyGLWidget::keyPressEvent(QKeyEvent* event)
       if (cam_perpectiva) {
         cam_perpectiva = false;
         Theta = float(M_PI/2.);
-        x_anterior = factorAngleX;
-        y_anterior = factorAngleY; 
-        factorAngleX = factorAngleY = 0;
-
+     
       }
       else {
         cam_perpectiva = true;
-        Theta -= float(M_PI/4.);   
-        factorAngleX = x_anterior;
-        factorAngleY = y_anterior;
+        Theta -= float(M_PI/4.);  
       }
       projectTransform();
       viewTransform();

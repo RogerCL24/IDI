@@ -1,5 +1,7 @@
 # QT Designer Schemes  
 
+Faltan los elementos para redimensionar.
+
 ## Interface elements
 
 <p align = "center">

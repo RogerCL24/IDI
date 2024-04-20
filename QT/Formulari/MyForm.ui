@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyForm</class>
+ <widget class="QWidget" name="MyForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>419</width>
+    <height>301</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" rowspan="2">
+    <layout class="QVBoxLayout" name="verticalLayout_8">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Nom (Obligatori):</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="MyLabel" name="label_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Cognoms (Obligatori):</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="MyLabel" name="label_5">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_2">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>DNI (Obligatori):</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="MyLabel" name="label_9">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_4">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Data Naixement:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="MyLabel" name="label_7">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_3">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Codi postal:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="MyLabel" name="label_13">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_6">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>Adreça:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="MyLabel" name="label_11">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_5">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>Nacionalitat (Obligatori):</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="MyLabel" name="label_15">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_7">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Reinicia</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Ok</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="MyLabel" name="label">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="text">
+      <string>Sortir</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyLabel</class>
+   <extends>QLabel</extends>
+   <header>MyLabel.h</header>
+   <slots>
+    <signal>sendHeader(QString)</signal>
+    <slot>OkPulsed()</slot>
+    <slot>concatenate(QString)</slot>
+    <slot>tabdiilOkState_2()</slot>
+    <slot>tabdiilOkState_1()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>label_3</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>label_3</receiver>
+   <slot>OkPulsed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>924</x>
+     <y>531</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>366</x>
+     <y>113</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>label_5</receiver>
+   <slot>OkPulsed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>946</x>
+     <y>517</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>617</x>
+     <y>114</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>label_9</receiver>
+   <slot>OkPulsed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>947</x>
+     <y>496</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>375</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>label_15</receiver>
+   <slot>OkPulsed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>904</x>
+     <y>518</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>422</x>
+     <y>431</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_2</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>label_5</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>505</x>
+     <y>147</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>558</x>
+     <y>94</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_4</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>label_9</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>103</x>
+     <y>264</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>266</x>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_3</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>label_7</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>559</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_6</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>label_13</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>148</x>
+     <y>402</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_5</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>label_11</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>511</x>
+     <y>406</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_7</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>label_15</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>527</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>417</x>
+     <y>480</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>label_3</sender>
+   <signal>sendHeader(QString)</signal>
+   <receiver>label</receiver>
+   <slot>concatenate(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>371</x>
+     <y>70</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>390</x>
+     <y>669</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>label_9</sender>
+   <signal>sendHeader(QString)</signal>
+   <receiver>label</receiver>
+   <slot>concatenate(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>186</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>578</x>
+     <y>682</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>label_5</sender>
+   <signal>sendHeader(QString)</signal>
+   <receiver>label</receiver>
+   <slot>concatenate(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>412</x>
+     <y>697</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MyForm</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>923</x>
+     <y>706</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>867</x>
+     <y>710</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>label</receiver>
+   <slot>tabdiilOkState_2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>860</x>
+     <y>184</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>698</x>
+     <y>650</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>label_3</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>910</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>54</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>label_5</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>888</x>
+     <y>163</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>584</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>label_9</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>849</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>375</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>label_7</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>970</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>637</x>
+     <y>247</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>label_13</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>970</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>380</x>
+     <y>340</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>label_11</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>950</x>
+     <y>172</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>659</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>label_15</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>866</x>
+     <y>180</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>538</x>
+     <y>492</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>842</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>332</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_2</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>956</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>578</x>
+     <y>147</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_4</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>886</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>303</x>
+     <y>283</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_3</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>871</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>605</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_6</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>924</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_5</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>965</x>
+     <y>188</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>492</x>
+     <y>412</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_7</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>944</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>329</x>
+     <y>534</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>label</receiver>
+   <slot>tabdiilOkState_1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>856</x>
+     <y>550</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>671</x>
+     <y>657</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>label_15</sender>
+   <signal>sendHeader(QString)</signal>
+   <receiver>label</receiver>
+   <slot>concatenate(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>451</x>
+     <y>459</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>685</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

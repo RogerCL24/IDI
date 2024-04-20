@@ -16,6 +16,5 @@
 ## Final display
 
 <p align="center">
-<img src="https://github.com/RogerCL24/IDI/assets/90930371/d3b9ae14-e409-4439-9007-842716663a19"/>
+<img src="https://github.com/RogerCL24/IDI/assets/90930371/8febc8da-0913-4f8f-957e-0b77afd0fde9"/>
 </p>
-

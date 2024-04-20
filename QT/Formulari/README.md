@@ -1,8 +1,8 @@
 # QT Designer Schemes  
 
-Faltan los elementos para redimensionar.
 
 ## Interface elements
+Faltan los elementos para redimensionar.
 
 <p align = "center">
 <img = src="https://github.com/RogerCL24/IDI/assets/90930371/552ce11f-451f-47d4-868b-fd9eb36fcc03"/>

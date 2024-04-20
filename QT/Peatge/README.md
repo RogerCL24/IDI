@@ -9,11 +9,12 @@
 ## Slots/signals
 
 <p align="center">
-<img src="https://github.com/RogerCL24/IDI/assets/90930371/4f05b40b-6d3f-49ad-8a3c-1168439b726d"/>
+<img src="https://github.com/RogerCL24/IDI/assets/90930371/a578c719-0c22-4f81-b1bf-1a10c6e945d7"/>
 </p>
 
 ## Final display
 
 <p align="center">
-<img src="https://github.com/RogerCL24/IDI/assets/90930371/fbb7fd29-b5c2-4f68-91ad-1ad0ab52b25d"/>
+<img src="https://github.com/RogerCL24/IDI/assets/90930371/c586741b-96e4-40c6-93b6-d068d6c6714c"/>
 </p>
+

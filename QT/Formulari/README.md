@@ -7,8 +7,8 @@
 </p>
 
 ## Slots/signals
-
-He puesto el MyQLabel mas abajo para que se vean los signals/slots en la captura.
+Es importante que pongais en orden los `signals-slots` de `sendHeader(QString)-concatenate(QString)`, es decir, primero va el `sendHeader` de Nom, despues Cognoms, DNI i Nacionalitat.
+I el `signal-slot`, `clicked()-tabdiilOkState_1`, ha de ser el ultimo que asigneis.
 
 <p align = "center">
 <img = src="https://github.com/RogerCL24/IDI/assets/90930371/00972252-79b1-4d64-af5d-72d31439edb7"/>

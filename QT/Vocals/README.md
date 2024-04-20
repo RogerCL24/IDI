@@ -11,14 +11,14 @@
 ## Slots/signals
 
 <p align = "center">
-<img = src="https://github.com/RogerCL24/IDI/assets/90930371/4e6558df-8dbc-4d93-91bb-e4a64e2bb621"/>
-
+<img = src="https://github.com/RogerCL24/IDI/assets/90930371/69f33a40-962c-44d3-b9d2-f20c93d19999"/>
 </p>
 
 ## Final display
 
 <p align = "center">
-<img = src="https://github.com/RogerCL24/IDI/assets/90930371/a40fb8f0-9583-4d60-b364-cc3f1ba7eaf3"/>
+<img = src="https://github.com/RogerCL24/IDI/assets/90930371/5643379c-0bc8-4383-b1e6-49b7784dbf80"/>
 
 </p>
+
 

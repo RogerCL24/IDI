@@ -12,16 +12,18 @@
 He puesto el MyQLabel mas abajo para que se vean los signals/slots en la captura.
 
 <p align = "center">
-<img = src="https://github.com/RogerCL24/IDI/assets/90930371/434dbb8f-54f2-4614-8270-6251de6eea17"/>
+<img = src="https://github.com/RogerCL24/IDI/assets/90930371/9c4a908c-6994-46de-85fd-1ac090e164bf"/>
 
 </p>
+
 
 
 
 ## Final display
 
 <p align = "center">
-<img = src="https://github.com/RogerCL24/IDI/assets/90930371/f7bc6dd5-3dff-4a67-8753-3e6ebffcae75"/>
+<img = src="https://github.com/RogerCL24/IDI/assets/90930371/f1630ba4-92f7-495a-b524-b8f6892d5dba"/>
 
 </p>
+
 

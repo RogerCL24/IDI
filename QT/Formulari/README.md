@@ -9,7 +9,7 @@ Faltan los elementos para redimensionar.
 </p>
 
 ## Slots/signals
-Es importante que pongais en orden los `signals-slots` de `sendHeader(QString)-concatenate(QString)`, es decir, primero va el `sendHeader` de Nom, despues Cognoms, DNI i Nacionalitat.
+Es importante que pongais en orden los `signals-slots` de `sendHeader(QString)-concatenate(QString)`, es decir, primero va el `sendHeader` de Nom, despues Cognoms, DNI i Nacionalitat (en este orden).
 I el `signal-slot`, `clicked()-tabdiilOkState_1`, ha de ser el ultimo que asigneis.
 
 <p align = "center">

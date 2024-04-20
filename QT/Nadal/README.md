@@ -10,8 +10,9 @@
 ## Slots/signals
 
 <p align="center">
-<img src="https://github.com/RogerCL24/IDI/assets/90930371/b0ba8e14-ab08-45c2-821f-7bb835280f06"/>
+<img src="https://github.com/RogerCL24/IDI/assets/90930371/56f3c140-d821-4f62-b766-5422a5810916"/>
 </p>
+
 
 ## Final display
 

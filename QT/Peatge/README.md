@@ -7,7 +7,7 @@
 </p>
 
 ## Slots/signals
-
+En el ``radioButton`` utilizad mejor ``clicked(bool)`` como signal, asi no hace falta que guardeis un bool en cada label.
 <p align="center">
 <img src="https://github.com/RogerCL24/IDI/assets/90930371/a578c719-0c22-4f81-b1bf-1a10c6e945d7"/>
 </p>

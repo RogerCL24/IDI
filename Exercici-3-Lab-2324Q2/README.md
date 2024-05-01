@@ -16,7 +16,4 @@ La funcion `initialState()` es la funcion `inicio()`
 
 ## Final display
 
-<p align="center">
-<img src="https://github.com/RogerCL24/IDI/assets/90930371/aee6cf15-f4cd-48c2-b13e-fc12256adfa7"/>
-</p>
 

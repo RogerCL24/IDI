@@ -1,6 +1,7 @@
 # Qt Designer Schemes
 
 ## Interface elements
+Assignad manualmente desde propiedades (a la derecha del Qt designer window) el valor inicial de cada barra. 
 
 <p align="center">
 <img src="https://github.com/RogerCL24/IDI/assets/90930371/78f4afdd-056c-4c49-96e4-30b563d73332"/>

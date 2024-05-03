@@ -1,7 +1,8 @@
 # Qt Designer Schemes
 
 ## Interface elements
-Falta redimensionar (`Spacers`)
+- Falta redimensionar (`Spacers`)
+- Los QObjects añadidos van fuera del window de OpenGL. <sub>Al contrario de esta imagen </sub>
 
 <p align="center">
 <img src="https://github.com/RogerCL24/IDI/assets/90930371/6c8c2d8c-3306-4139-b95a-d044e20b0a0b"/>
